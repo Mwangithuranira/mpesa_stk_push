@@ -1,0 +1,14 @@
+###
+POST http://localhost:8000/stk
+Content-Type: application/json
+
+{
+    "phone": 0112810203,
+    
+     "amount": 10
+}
+
+
+
+###
+GET http://localhost:8000/token
