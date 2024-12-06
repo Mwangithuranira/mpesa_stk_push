@@ -81,28 +81,46 @@ POST /callback
 Handles notifications from Safaricom about payment status.
 📖 How It Works
 Token Generation: Authenticates with Safaricom's API using your credentials to get an access token.
+
 STK Push: Uses the token to send a payment request to the user’s phone.
+
+
 Callback Handling: Listens for a response from Safaricom about the transaction status.
 🐞 Debugging
 Environment Variables: Logs all variables at startup to ensure proper setup.
+
+
 Request Debugging: Logs complete details for each STK Push request, including the payload and timestamp.
+
 Common Issues:
 Invalid Timestamp: Ensure Timestamp is formatted as yyyyMMddHHmmss.
+
+
 Token Generation Errors: Verify your Consumer Key and Secret.
+
+
+
 ✨ Developer Notes
+
+
 This project was crafted with care by Eng. Johnson Mwangi. For inquiries or support, please feel free to contact me:
 
 📧 Email: johnsonthuraniramwangi@gmail.com
 
 🛠️ Future Enhancements
+
 🔒 Implement authentication and rate limiting.
+
 🌍 Add production environment configurations for enhanced security.
+
 🖥️ Build a front-end interface for a user-friendly experience.
+
 📜 License
 This project is licensed under the MIT License. Contributions and feedback are highly encouraged! 🚀
 
 👨‍💻 Developed By
 Eng. Johnson Mwangi
+
 📧 johnsonthuraniramwangi@gmail.com
 
 Happy Coding! 💻🚀
