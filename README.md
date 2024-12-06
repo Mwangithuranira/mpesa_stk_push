@@ -1,30 +1,37 @@
-MPESA STK Push Service
-This project implements a Node.js application for Safaricom MPESA STK Push functionality. Developed by Eng. Johnson Mwangi, it allows users to make payments directly from their mobile phones using Safaricom's MPESA API.
+# 🌟 MPESA STK Push Service 🌟
 
-Features
-🌟 Token Generation: Securely generates access tokens using the MPESA Consumer Key and Secret.
-📲 STK Push: Initiates an STK Push request to the user's mobile phone for seamless payment.
-🔔 Callback Handling: Processes payment notifications via a designated callback URL.
-🌐 Environment Variables Logging: Ensures all necessary configurations are correctly set.
-Prerequisites
-Before running the application, ensure you have the following:
+Welcome to the **MPESA STK Push Service**! This Node.js application provides seamless integration with Safaricom's MPESA API, allowing users to make payments directly from their mobile phones. Developed with ❤️ by **Eng. Johnson Mwangi**.
 
-Node.js and npm: Installed on your machine.
-MPESA Sandbox Credentials: Obtain the following from the Safaricom Developer Portal:
-Consumer Key
-Consumer Secret
-Paybill/Shortcode
-Passkey
-.env File: Create a .env file in the root of your project and include these variables:
-plaintext
-Copy code
-PORT=8000
-MPESA_PAYBILL=YOUR_PAYBILL_NUMBER
-PASSKEY=YOUR_PASSKEY
-MPESA_CONSUMER_KEY=YOUR_CONSUMER_KEY
-MPESA_CONSUMER_SECRET=YOUR_CONSUMER_SECRET
-CALLBACK_URL=https://your-server/callback
-Installation
+---
+
+## 🚀 Features
+
+- **Secure Token Generation**: Automatically generates access tokens for MPESA API authentication.
+- **STK Push Payments**: Sends an STK Push request to users for instant payment authorization.
+- **Payment Callback Handling**: Handles notifications for completed payments.
+- **Environment Variable Logging**: Ensures all required configurations are correctly set for smooth operation.
+
+---
+
+## 📋 Prerequisites
+
+Before running this application, ensure you have:
+
+1. **Node.js and npm**: Installed on your local machine.
+2. **MPESA Sandbox Credentials**: Get the following from [Safaricom Developer Portal](https://developer.safaricom.co.ke/):
+   - Consumer Key
+   - Consumer Secret
+   - Paybill/Shortcode
+   - Passkey
+3. **.env File**: Create a `.env` file in the project root and add the following:
+   ```plaintext
+   PORT=8000
+   MPESA_PAYBILL=YOUR_PAYBILL_NUMBER
+   PASSKEY=YOUR_PASSKEY
+   MPESA_CONSUMER_KEY=YOUR_CONSUMER_KEY
+   MPESA_CONSUMER_SECRET=YOUR_CONSUMER_SECRET
+   CALLBACK_URL=https://your-server/callback
+🛠️ Installation
 Clone the repository:
 
 bash
@@ -43,10 +50,10 @@ Start the application:
 bash
 Copy code
 npm start
-Endpoints
+🌐 API Endpoints
 1. Home
 GET /
-Returns a welcome message indicating the server is running.
+Returns a friendly message confirming the server is running.
 2. Generate Token
 GET /token
 Generates and returns an MPESA access token.
@@ -71,24 +78,31 @@ Copy code
 }
 4. Callback
 POST /callback
-Handles payment notifications from Safaricom.
-Debugging
-Environment Variables: Logs all required variables on server startup for troubleshooting.
-STK Push Debugging: Provides detailed logs for each STK Push request, including the timestamp, password, and payload data.
-Common Issues
-Invalid Timestamp: Ensure the Timestamp field is formatted as yyyyMMddHHmmss.
-Missing Environment Variables: Verify that all required fields in the .env file are correctly set.
-Token Generation Errors: Ensure the MPESA Consumer Key and Secret are valid.
-Future Improvements
-Add authentication and rate limiting for endpoints.
-Implement production environment configurations for enhanced security.
-Develop a front-end interface for users to interact with the service.
-About the Developer
-This application was developed by Eng. Johnson Mwangi. If you have any questions or feedback, feel free to reach out via email:
+Handles notifications from Safaricom about payment status.
+📖 How It Works
+Token Generation: Authenticates with Safaricom's API using your credentials to get an access token.
+STK Push: Uses the token to send a payment request to the user’s phone.
+Callback Handling: Listens for a response from Safaricom about the transaction status.
+🐞 Debugging
+Environment Variables: Logs all variables at startup to ensure proper setup.
+Request Debugging: Logs complete details for each STK Push request, including the payload and timestamp.
+Common Issues:
+Invalid Timestamp: Ensure Timestamp is formatted as yyyyMMddHHmmss.
+Token Generation Errors: Verify your Consumer Key and Secret.
+✨ Developer Notes
+This project was crafted with care by Eng. Johnson Mwangi. For inquiries or support, please feel free to contact me:
 
+📧 Email: johnsonthuraniramwangi@gmail.com
+
+🛠️ Future Enhancements
+🔒 Implement authentication and rate limiting.
+🌍 Add production environment configurations for enhanced security.
+🖥️ Build a front-end interface for a user-friendly experience.
+📜 License
+This project is licensed under the MIT License. Contributions and feedback are highly encouraged! 🚀
+
+👨‍💻 Developed By
+Eng. Johnson Mwangi
 📧 johnsonthuraniramwangi@gmail.com
 
-License
-This project is open-source and licensed under the MIT License. Contributions are welcome! 🎉
-
-Happy Coding! 🚀
+Happy Coding! 💻🚀
