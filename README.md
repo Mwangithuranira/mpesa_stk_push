@@ -50,13 +50,17 @@ Start the application:
 bash
 Copy code
 npm start
+
 🌐 API Endpoints
+
 1. Home
 GET /
 Returns a friendly message confirming the server is running.
+
 2. Generate Token
 GET /token
 Generates and returns an MPESA access token.
+
 3. STK Push
 POST /stk
 Initiates an MPESA STK Push request.
@@ -67,6 +71,8 @@ Copy code
   "phone": "254712345678",
   "amount": 100
 }
+
+
 Response:
 json
 Copy code
@@ -76,9 +82,13 @@ Copy code
     // Safaricom's STK Push API response
   }
 }
+
+
 4. Callback
 POST /callback
 Handles notifications from Safaricom about payment status.
+
+
 📖 How It Works
 Token Generation: Authenticates with Safaricom's API using your credentials to get an access token.
 
